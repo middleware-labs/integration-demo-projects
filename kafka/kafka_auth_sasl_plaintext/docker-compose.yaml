@@ -1,0 +1,100 @@
+version: '2'
+services:
+  zookeeper-1:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2281
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 22281:2281
+
+  zookeeper-2:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2281
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 32281:2281
+  
+  kafka-1:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper-1
+      - zookeeper-2
+    ports:
+      - 9192:9192
+      - 8092:8092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2281,zookeeper-2:2281
+      ZOOKEEPER_SASL_ENABLED: false
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-1:19192, SASL_PLAINTEXT://localhost:9192
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT, SASL_PLAINTEXT:SASL_PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.net.preferIPv4Stack=true"
+      JMX_PORT: 8092
+      KAFKA_SECURITY_INTER_BROKER_PROTOCOL: PLAINTEXT
+      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
+      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
+      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/configs/kafka_server_jaas.conf"
+    volumes:
+      - ./configs:/etc/kafka/configs
+  
+  kafka-2:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper-1
+      - zookeeper-2
+    ports:
+      - 9193:9193
+      - 8093:8093
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2281,zookeeper-2:2281
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-2:19192, SASL_PLAINTEXT://localhost:9193
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT, SASL_PLAINTEXT:SASL_PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.net.preferIPv4Stack=true"
+      JMX_PORT: 8093
+      ZOOKEEPER_SASL_ENABLED: false
+      KAFKA_SECURITY_INTER_BROKER_PROTOCOL: PLAINTEXT
+      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
+      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
+      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/configs/kafka_server_jaas.conf"
+    volumes:
+      - ./configs:/etc/kafka/configs
+  
+  kafka-3:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper-1
+      - zookeeper-2
+    ports:
+      - 9194:9194
+      - 8094:8094
+    environment:
+      KAFKA_BROKER_ID: 3
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2281,zookeeper-2:2281
+      ZOOKEEPER_SASL_ENABLED: false
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-3:19192, SASL_PLAINTEXT://localhost:9194
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT, SASL_PLAINTEXT:SASL_PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_JMX_OPTS: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.net.preferIPv4Stack=true"
+      JMX_PORT: 8094
+      KAFKA_SECURITY_INTER_BROKER_PROTOCOL: PLAINTEXT
+      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
+      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
+      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/configs/kafka_server_jaas.conf"
+    volumes:
+      - ./configs:/etc/kafka/configs
+
+  kowl:
+    image: quay.io/cloudhut/kowl:master
+    depends_on:
+      - kafka-1
+      - kafka-2
+      - kafka-3
+    ports:
+      - 8080:8080
+    environment:
+      KAFKA_BROKERS: kafka-1:19192,kafka-2:19192,kafka-3:19192
