@@ -35,3 +35,8 @@
   - Username: `mwkafkausername`
   - Password: `mwkafkapassword`
   - Credentials can be changed from file `kafka/kafka_auth_sasl_plaintext/configs/kafka_server_jaas.conf`.
+
+## Kowl
+
+- Kowl is the visualization tool for Kafka.
+- Access Kowl from [http://localhost:8080](http://localhost:8080)
