@@ -14,10 +14,10 @@
 git clone https://github.com/middleware-labs/integration-demo-projects.git
 ```
 
-- Navigate to the `apache-httpd` directory
+- Navigate to the `apache` directory
 
 ```bash
-cd integration-demo-projects/apache-httpd
+cd integration-demo-projects/apache
 ```
 
 - Make build script executable
