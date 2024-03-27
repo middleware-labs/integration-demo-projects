@@ -6,7 +6,8 @@ build_image() {
 
 start_container() {
     docker run -d --name mw-demo-apache -p $1:80 mw-demo-apache
-    echo "visit http:localhost:8080 in browser"
+    printf "visit http://localhost:%s in browser\n" $1
+    printf "visit http://localhost:%s/server-status?refresh=1&auto to see the server stats\n" $1
 }
 
 stop_container() {
