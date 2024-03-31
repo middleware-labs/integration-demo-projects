@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  httpd1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${HTTPD1_PORT:-8080}:80"
+    environment:
+      HTTPD1_PORT: ${HTTPD1_PORT:-8080}
+
+  httpd2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${HTTPD2_PORT:-8081}:80"
+    environment:
+      HTTPD2_PORT: ${HTTPD2_PORT:-8081}

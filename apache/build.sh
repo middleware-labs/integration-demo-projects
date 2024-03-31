@@ -1,36 +1,36 @@
 #!/bin/bash
 
-build_image() {
-    docker build -t mw-demo-apache .
+start_container() {
+    validate_int "$1"
+
+    p1="$1"
+    p2=$((p1 + 1))
+
+    HTTPD1_PORT="$p1" HTTPD2_PORT="$p2" docker-compose up -d
 }
 
-start_container() {
-    docker run -d --name mw-demo-apache -p $1:80 mw-demo-apache
-    printf "visit http://localhost:%s in browser\n" $1
-    printf "visit http://localhost:%s/server-status?refresh=1&auto to see the server stats\n" $1
+validate_int() {
+    if ! [[ "$1" =~ ^[0-9]+$ ]]; then
+        echo "Error: '$1' is not a valid integer."
+        exit 1
+    fi
 }
 
 stop_container() {
-    docker stop mw-demo-apache
-    docker rm mw-demo-apache
-}
-
-remove_image() {
-    docker rmi mw-demo-apache
+    docker-compose down
 }
 
 case "$1" in
     up)
-        build_image
-         port=${2:-8080}
-        start_container $port
+        port="${2:-8080}"
+        start_container "$port"
         ;;
     down)
         stop_container
-        remove_image
         ;;
     *)
-        echo "Usage: $0 {up|down}"
+        echo "Usage: $0 {up|down} [port]"
+        echo "Note: It will create two servers on port and port + 1, default port = 8080"
         exit 1
         ;;
 esac
