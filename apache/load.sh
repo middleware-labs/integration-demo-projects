@@ -10,14 +10,13 @@ validate_int() {
 CONCURRENCY=${1}
 TOTAL_REQUESTS=${2}
 
-validate_int "$CONCURRENCY"
-validate_int "$TOTAL_REQUESTS"
-
-
 if [ -z "$CONCURRENCY" ] || [ -z "$TOTAL_REQUESTS" ] || [ "$#" -lt 3 ]; then
     echo "Usage: $0 <concurrency> <total_requests> <server_url1> [<server_url2> ...]"
     exit 1
 fi
+
+validate_int "$CONCURRENCY"
+validate_int "$TOTAL_REQUESTS"
 
 shift 2
 
