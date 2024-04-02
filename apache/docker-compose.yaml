@@ -2,22 +2,30 @@ version: '3.8'
 
 services:
   httpd1:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: httpd:latest
+    volumes:
+      - ./src/index.html:/usr/local/apache2/htdocs/index.html
+      - ./src/style.css:/usr/local/apache2/htdocs/style.css
+      - ./src/script.js:/usr/local/apache2/htdocs/script.js
+      - ./src/assets:/usr/local/apache2/htdocs/assets
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
     ports:
       - "${HTTPD1_PORT:-8080}:80"
     environment:
-      HTTPD1_PORT: ${HTTPD1_PORT:-8080}
+      HTTPD_PORT: ${HTTPD1_PORT:-8080}
 
   httpd2:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: httpd:latest
+    volumes:
+      - ./src/index.html:/usr/local/apache2/htdocs/index.html
+      - ./src/style.css:/usr/local/apache2/htdocs/style.css
+      - ./src/script.js:/usr/local/apache2/htdocs/script.js
+      - ./src/assets:/usr/local/apache2/htdocs/assets
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
     ports:
       - "${HTTPD2_PORT:-8081}:80"
     environment:
-      HTTPD2_PORT: ${HTTPD2_PORT:-8081}
+      HTTPD_PORT: ${HTTPD2_PORT:-8081}
 
   cron:
     image: ubuntu:latest
