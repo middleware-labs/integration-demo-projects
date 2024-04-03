@@ -1,0 +1,16 @@
+{
+  "db1": {
+    "username": "system",
+    "password": "oracledb",
+    "host": "oracle_db1",
+    "port": 1521,
+    "service_name": "XE"
+  },
+  "db2": {
+    "username": "system",
+    "password": "oracledb",
+    "host": "oracle_db2",
+    "port": 1521,
+    "service_name": "XE"
+  }
+}

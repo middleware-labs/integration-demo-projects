@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  oracle_db1:
+    container_name: oracledb1
+    image: container-registry.oracle.com/database/express:latest
+    environment:
+      - ORACLE_PWD=oracledb
+    ports:
+      - "1521:1521"
+      - "5500:5500"  # Optional for Oracle SQL Developer access
+    volumes:
+      - oracle_data:/opt/oracle/oradata  # Persistent storage for DB data
+
+  oracle_db2:
+    container_name: oracledb2
+    image: container-registry.oracle.com/database/express:latest
+    environment:
+      - ORACLE_PWD=oracledb
+    ports:
+      - "1522:1521"
+      - "5501:5500"  # Optional for Oracle SQL Developer access
+    volumes:
+      - oracle_data1:/opt/oracle/oradata  # Persistent storage for DB data
+
+  cron:
+    image: python:3.10
+    volumes:
+      - ./:/scripts  # Mount current directory to /scripts in container
+    command: sh -c "apt-get update && \
+             apt-get install -y cron && \
+             pip install oracledb && \
+             echo '*/1 * * * * root /usr/local/bin/python /scripts/create_data.py >> /var/log/cron.log 2>&1' > /etc/cron.d/script1 && \
+             echo '*/1 * * * * root /usr/local/bin/python /scripts/select_data.py >> /var/log/cron.log 2>&1' > /etc/cron.d/script2 && \
+             chmod 0644 /etc/cron.d/script1 /etc/cron.d/script2 && \
+             crontab /etc/cron.d/script1 && \
+             crontab /etc/cron.d/script2 && \
+             cron -f"
+
+
+volumes:
+  oracle_data:
+  oracle_data1:
