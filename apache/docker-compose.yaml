@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  httpd1:
+    image: httpd:latest
+    volumes:
+      - ./src/index.html:/usr/local/apache2/htdocs/index.html
+      - ./src/style.css:/usr/local/apache2/htdocs/style.css
+      - ./src/script.js:/usr/local/apache2/htdocs/script.js
+      - ./src/assets:/usr/local/apache2/htdocs/assets
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+    ports:
+      - "${HTTPD1_PORT:-8080}:80"
+    environment:
+      HTTPD_PORT: ${HTTPD1_PORT:-8080}
+
+  httpd2:
+    image: httpd:latest
+    volumes:
+      - ./src/index.html:/usr/local/apache2/htdocs/index.html
+      - ./src/style.css:/usr/local/apache2/htdocs/style.css
+      - ./src/script.js:/usr/local/apache2/htdocs/script.js
+      - ./src/assets:/usr/local/apache2/htdocs/assets
+      - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+    ports:
+      - "${HTTPD2_PORT:-8081}:80"
+    environment:
+      HTTPD_PORT: ${HTTPD2_PORT:-8081}
+
+  cron:
+    image: ubuntu:latest
+    volumes:
+      - ./load.sh:/usr/local/bin/load.sh
+    command: >
+      /bin/sh -c "apt-get update && \
+      apt-get install -y cron && \
+      apt-get install -y curl && \
+      chmod +x /usr/local/bin/load.sh && \
+      echo '* * * * * root /usr/local/bin/load.sh 10 $(shuf -i 1000-10000 -n 1) httpd1 >> /var/log/cron1.log' > /etc/cron.d/apache_1 && \
+      echo '* * * * * root /usr/local/bin/load.sh 10 $(shuf -i 1000-10000 -n 1) httpd2 >> /var/log/cron2.log' > /etc/cron.d/apache_2 && \
+      cron -f"

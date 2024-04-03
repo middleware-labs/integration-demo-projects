@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- sidebar-start -->
+    <section id="menu">
+        <div class="logo">
+            <img src="./assets/img/logo.png" alt="logo">
+            <h2>Demo</h2>
+        </div>
+
+        <div class="items">
+            <li><i class="fa-solid fa-chart-pie"></i><a href="#">Dashboard</a></li>
+            <li><i class="fa-brands fa-uikit"></i><a href="#">UI Elements</a></li>
+            <li><i class="fa-solid fa-table-cells-large"></i><a href="#">Tables</a></li>
+            <li><i class="fa-brands fa-wpforms"></i><a href="#">Forms</a></li>
+            <li><i class="fa-brands fa-cc-visa"></i><a href="#">Cards</a></li>
+            <li><i class="fa-solid fa-burger"></i><a href="#">Modals</a></li>
+            <li><i class="fa-solid fa-chart-line"></i><a href="#">Blank</a></li>
+        </div>
+    </section>
+    <!-- sidebar-end -->
+
+    <!-- interface-start -->
+    <section id="interface">
+
+        <!-- navbar-start -->
+        <div class="navigation">
+            <div class="n1">
+                <div>
+                    <i id="menu-btn" class="fa-solid fa-bars"></i>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="profile">
+                <i class="fa-regular fa-bell"></i>
+                <img src="./assets/img/elon-musk.jpg" alt="">
+            </div>
+        </div>
+        <!-- navbar-end -->
+
+        <h3 class="i-name">Dashboard</h3>
+
+        <div class="values">
+            <div class="val-box">
+                <i class="fa-sharp fa-solid fa-users"></i>
+                <div>
+                    <h3>8,399</h3>
+                    <span>New Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div>
+                    <h3>8,399</h3>
+                    <span>New Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-brands fa-product-hunt"></i>
+                <div>
+                    <h3>8,399</h3>
+                    <span>New Users</span>
+                </div>
+            </div>
+            <div class="val-box">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <div>
+                    <h3>8,399</h3>
+                    <span>New Users</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- table-start -->
+        <div class="board">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Title</td>
+                        <td>Status</td>
+                        <td>Role</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td class="people">
+                            <div class="people-dec">
+                                <h5>john doe</h5>
+                                <p>jd@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>CEO</h5>
+                            <p>Techno King</p>
+                        </td>
+
+                        <td class="active">
+                            <p>Active</p>
+                        </td>
+
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <div class="people-dec">
+                                <h5>john doe</h5>
+                                <p>jd@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>CEO</h5>
+                            <p>Techno King</p>
+                        </td>
+
+                        <td class="active">
+                            <p>Active</p>
+                        </td>
+
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <div class="people-dec">
+                                <h5>john doe</h5>
+                                <p>jd@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>CEO</h5>
+                            <p>Techno King</p>
+                        </td>
+
+                        <td class="active">
+                            <p>Active</p>
+                        </td>
+
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <div class="people-dec">
+                                <h5>john doe</h5>
+                                <p>jd@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>CEO</h5>
+                            <p>Techno King</p>
+                        </td>
+
+                        <td class="active">
+                            <p>Active</p>
+                        </td>
+
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+                    <tr>
+                        <td class="people">
+                            <div class="people-dec">
+                                <h5>john doe</h5>
+                                <p>jd@example.com</p>
+                            </div>
+                        </td>
+
+                        <td class="people-des">
+                            <h5>CEO</h5>
+                            <p>Techno King</p>
+                        </td>
+
+                        <td class="active">
+                            <p>Active</p>
+                        </td>
+
+                        <td class="role">
+                            <p>Owner</p>
+                        </td>
+
+                        <td class="edit"><a href="#">Edit</a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- table-end -->
+
+        <!-- chart-start -->
+        <div class="charts">
+
+            <div class="charts-card">
+                <p class="chart-title">Top 5 Products</p>
+                <div id="bar-chart"></div>
+            </div>
+
+            <div class="charts-card">
+                <p class="chart-title">Purchase and Sales Orders</p>
+                <div id="area-chart"></div>
+            </div>
+
+        </div>
+        <!-- chart-end -->
+
+    </section>
+    <!-- interface-end -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.0/apexcharts.min.js"
+        integrity="sha512-RLWwcf0Pb2NghIfkaQms354xRV36EYjXLWKSN8QHiHqNq3KGj0DjMc9D1zzO7UsREkGU/xCLAJi/hVcKSuZ5Cw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+    <script>
+        $('#menu-btn').click(function () {
+            $('#menu').toggleClass("active");
+        })
+    </script>
+</body>
+
+</html>
