@@ -69,7 +69,6 @@ def generate_data(db_config, table_name, num_rows, sleep_time):
 if __name__ == "__main__":
     # Load database configurations from config.json
     with open('/scripts/config.json') as f:
-        # with open('config.json') as f:
         db_configs = json.load(f)
 
     # Adjust these parameters as needed

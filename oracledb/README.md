@@ -25,5 +25,5 @@
 
 ## Database Viewer Tools
 
-- Use Database Viewer Tools like **DataGrip** or **DBeaver** etc which is supported Oracle DB.
+- Use Database Viewer Tools like **DataGrip** or **DBeaver** etc which supports Oracle DB.
 - Connect data source using required credentials of Oracle DB services on one of this tool to view generated data.
