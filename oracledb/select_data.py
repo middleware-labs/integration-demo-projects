@@ -12,7 +12,7 @@ def check_table_exists(connection, table_name):
         row = cursor.fetchone()
         return row is not None
     except oracledb.DatabaseError as err:
-        # Handle potential errors during table existence check (e.g., insufficient privileges)
+        # Handle potential errors during table existence check
         print(f"Error checking table existence: {err}")
         return False
 
@@ -42,7 +42,7 @@ def select_data(db_config, table_name, sleep_time):
 
 
 if __name__ == "__main__":
-    # Load database configurations from credentials.json
+    # Load database configurations from config.json
     with open('/scripts/config.json') as f:
         db_configs = json.load(f)
 
