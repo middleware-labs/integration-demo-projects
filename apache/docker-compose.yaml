@@ -9,6 +9,7 @@ services:
       - ./src/script.js:/usr/local/apache2/htdocs/script.js
       - ./src/assets:/usr/local/apache2/htdocs/assets
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./logs/httpd1/:/usr/local/apache2/logs
     ports:
       - "${HTTPD1_PORT:-8080}:80"
     environment:
@@ -22,6 +23,7 @@ services:
       - ./src/script.js:/usr/local/apache2/htdocs/script.js
       - ./src/assets:/usr/local/apache2/htdocs/assets
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./logs/httpd2/:/usr/local/apache2/logs
     ports:
       - "${HTTPD2_PORT:-8081}:80"
     environment:
