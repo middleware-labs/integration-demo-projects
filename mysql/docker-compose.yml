@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    environment:
+      MYSQL_ROOT: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysqldb
+      MYSQL_URL: jdbc:mysql://mysqldb:3306/mysqldb
+    ports:
+      - "3306:3306"
+    volumes:
+      - test-mysql-data:/var/lib/mysql
+
+volumes:
+  test-mysql-data:
