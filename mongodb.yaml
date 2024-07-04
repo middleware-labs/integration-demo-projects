@@ -1,0 +1,6 @@
+    mongodb:
+    hosts:
+      - endpoint: localhost:27017
+    username: root
+    password: example
+
