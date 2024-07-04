@@ -1,0 +1,10 @@
+redis:
+    endpoint: localhost:6379
+    ## all fields below are optional ##
+    # password: redis
+    # transport: tcp    ## tcp or Unix
+    # tls:
+          # - insecure: true 
+          # - ca_file: <path_to_certificate>
+          # - cert_file: <path_to_certificate>
+          # - key_file: <path_to_file>   
