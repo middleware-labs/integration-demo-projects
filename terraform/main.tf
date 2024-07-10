@@ -156,13 +156,13 @@ resource "azurerm_network_security_group" "my_terraform_nsg" {
     destination_address_prefix = "*"
   }
   security_rule {
-    name                       = "Cassandra"
+    name                       = "Cassandra-JMX"
     priority                   = 1012
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "9042"
+    destination_port_range     = "7199"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -174,6 +174,17 @@ resource "azurerm_network_security_group" "my_terraform_nsg" {
     protocol                   = "Tcp"
     source_port_range          = "*"
     destination_port_range     = "9200"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+  security_rule {
+    name                       = "Redpanda"
+    priority                   = 1014
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "*"
+    destination_port_range     = "19644"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
