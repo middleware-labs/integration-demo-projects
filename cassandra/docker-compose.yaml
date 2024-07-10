@@ -1,14 +1,12 @@
-version: '3.8' 
-
+version: '3.8'
 services:
   cassandra:
-    image: cassandra:latest
-    container_name: cassandra-container
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - "9042:9042"
-    environment:
-      - CASSANDRA_USER=admin
-      - CASSANDRA_PASSWORD=admin
+      - "7199:7199"
     volumes:
       - cassandra-data:/var/lib/cassandra
 
