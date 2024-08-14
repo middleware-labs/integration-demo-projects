@@ -1,0 +1,480 @@
+06:42:41.996 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger root. Using Console instead.
+06:42:41.998 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger root. Using Console instead.
+06:42:41.998 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.apache.druid.initialization. Using Console instead.
+06:42:41.998 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.skife.config. Using Console instead.
+06:42:41.998 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.apache.druid.segment. Using Console instead.
+06:42:41.998 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.apache.kafka.clients.consumer.internals. Using Console instead.
+06:42:41.999 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.apache.druid.server.QueryResource. Using Console instead.
+06:42:41.999 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.apache.druid.server.coordinator. Using Console instead.
+06:42:41.999 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger com.sun.jersey.guice. Using Console instead.
+06:42:41.999 [main] WARN  org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory - Clearing all configured appenders for logger org.apache.druid.server.QueryLifecycle. Using Console instead.
+2024-08-01T06:42:42,275 INFO [main] org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2024-08-01T06:42:42,912 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-hdfs-storage], jars: aws-java-sdk-kms-1.12.638.jar, aws-java-sdk-core-1.12.638.jar, snappy-java-1.1.10.4.jar, wildfly-openssl-1.1.3.Final.jar, aws-java-sdk-s3-1.12.638.jar, druid-hdfs-storage-30.0.0.jar, httpclient-4.5.13.jar, jsr305-2.0.1.jar, hadoop-aws-3.3.6.jar, jmespath-java-1.12.638.jar, httpcore-4.4.11.jar, hadoop-client-api-3.3.6.jar, jackson-dataformat-cbor-2.12.7.jar, joda-time-2.12.5.jar, commons-codec-1.16.1.jar, hadoop-client-runtime-3.3.6.jar, slf4j-api-1.7.36.jar, commons-logging-1.1.1.jar
+2024-08-01T06:42:42,926 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-kafka-indexing-service], jars: snappy-java-1.1.10.4.jar, lz4-java-1.8.0.jar, druid-kafka-indexing-service-30.0.0.jar, kafka-clients-3.6.1.jar, zstd-jni-1.5.2-3.jar
+2024-08-01T06:42:42,928 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-datasketches], jars: druid-datasketches-30.0.0.jar, commons-math3-3.6.1.jar
+2024-08-01T06:42:42,929 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-multi-stage-query], jars: druid-multi-stage-query-30.0.0.jar
+2024-08-01T06:42:43,146 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-hdfs-storage], jars: aws-java-sdk-kms-1.12.638.jar, aws-java-sdk-core-1.12.638.jar, snappy-java-1.1.10.4.jar, wildfly-openssl-1.1.3.Final.jar, aws-java-sdk-s3-1.12.638.jar, druid-hdfs-storage-30.0.0.jar, httpclient-4.5.13.jar, jsr305-2.0.1.jar, hadoop-aws-3.3.6.jar, jmespath-java-1.12.638.jar, httpcore-4.4.11.jar, hadoop-client-api-3.3.6.jar, jackson-dataformat-cbor-2.12.7.jar, joda-time-2.12.5.jar, commons-codec-1.16.1.jar, hadoop-client-runtime-3.3.6.jar, slf4j-api-1.7.36.jar, commons-logging-1.1.1.jar
+2024-08-01T06:42:43,149 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-kafka-indexing-service], jars: snappy-java-1.1.10.4.jar, lz4-java-1.8.0.jar, druid-kafka-indexing-service-30.0.0.jar, kafka-clients-3.6.1.jar, zstd-jni-1.5.2-3.jar
+2024-08-01T06:42:43,151 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-datasketches], jars: druid-datasketches-30.0.0.jar, commons-math3-3.6.1.jar
+2024-08-01T06:42:43,157 INFO [main] org.apache.druid.guice.ExtensionsLoader - Loading extension [druid-multi-stage-query], jars: druid-multi-stage-query-30.0.0.jar
+2024-08-01T06:42:43,746 WARN [main] org.apache.hadoop.util.NativeCodeLoader - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2024-08-01T06:42:44,376 INFO [main] org.apache.druid.server.emitter.EmitterModule - Using emitter [NoopEmitter{}] for metrics and alerts, with dimensions [{version=30.0.0}].
+2024-08-01T06:42:44,832 INFO [main] org.apache.druid.server.metrics.MetricsModule - Loaded 8 monitors: org.apache.druid.client.cache.CacheMonitor, org.apache.druid.java.util.metrics.JvmMonitor, org.apache.druid.java.util.metrics.CpuAcctDeltaMonitor, org.apache.druid.java.util.metrics.JvmThreadsMonitor, org.apache.druid.server.metrics.EventReceiverFirehoseMonitor, org.apache.druid.query.ExecutorServiceMonitor, org.apache.druid.curator.DruidConnectionStateListener, org.apache.druid.server.initialization.jetty.JettyServerModule$JettyMonitor
+2024-08-01T06:42:44,839 INFO [main] org.apache.druid.cli.CliPeon - Starting up with processors [4], memory [268,435,456], maxMemory [268,435,456], directMemory [314,572,800]. Properties follow.
+2024-08-01T06:42:44,840 INFO [main] org.apache.druid.cli.CliPeon - * attemptId: 1
+2024-08-01T06:42:44,840 INFO [main] org.apache.druid.cli.CliPeon - * awt.toolkit: sun.awt.X11.XToolkit
+2024-08-01T06:42:44,840 INFO [main] org.apache.druid.cli.CliPeon - * druid.emitter.logging.logLevel: info
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.expressions.useStrictBooleans: true
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.extensions.loadList: ["druid-hdfs-storage", "druid-kafka-indexing-service", "druid-datasketches", "druid-multi-stage-query"] 
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.host: localhost
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.fork.property.druid.processing.buffer.sizeBytes: 25MiB
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.fork.property.druid.processing.numMergeBuffers: 2
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.fork.property.druid.processing.numThreads: 1
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.logs.directory: var/druid/indexing-logs
+2024-08-01T06:42:44,841 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.logs.type: file
+2024-08-01T06:42:44,842 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.runner.javaOptsArray: ["-server","-Xms256m","-Xmx256m","-XX:MaxDirectMemorySize=300m","-Duser.timezone=UTC","-Dfile.encoding=UTF-8","-XX:+ExitOnOutOfMemoryError","-Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager"]
+2024-08-01T06:42:44,842 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.task.baseTaskDir: /home/naman/experiments/druid/apache-druid-30.0.0/var/druid/task/slot0
+2024-08-01T06:42:44,842 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.task.hadoopWorkingPath: var/druid/hadoop-tmp
+2024-08-01T06:42:44,842 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexer.task.tmpStorageBytesPerTask: 4611686018427387903
+2024-08-01T06:42:44,842 INFO [main] org.apache.druid.cli.CliPeon - * druid.indexing.doubleStorage: double
+2024-08-01T06:42:44,842 INFO [main] org.apache.druid.cli.CliPeon - * druid.log.path: /home/naman/experiments/druid/apache-druid-30.0.0/bin/../log
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.lookup.enableLookupSyncOnStartup: false
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metadata.storage.connector.connectURI: jdbc:derby://localhost:1527/var/druid/metadata.db;create=true
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metadata.storage.connector.host: localhost
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metadata.storage.connector.port: 1527
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metadata.storage.type: derby
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metrics.emitter.dimension.dataSource: wikiticker-2015-09-12-sampled
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metrics.emitter.dimension.groupId: query-a9df4ec6-8a4b-439f-8f95-9f77db436235
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metrics.emitter.dimension.taskId: query-a9df4ec6-8a4b-439f-8f95-9f77db436235
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.metrics.emitter.dimension.taskType: query_controller
+2024-08-01T06:42:44,843 INFO [main] org.apache.druid.cli.CliPeon - * druid.monitoring.monitors: ["org.apache.druid.client.cache.CacheMonitor", "org.apache.druid.java.util.metrics.JvmMonitor", "org.apache.druid.java.util.metrics.CpuAcctDeltaMonitor", "org.apache.druid.java.util.metrics.JvmThreadsMonitor", "org.apache.druid.server.metrics.EventReceiverFirehoseMonitor"]
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.node.type: middleManager
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.plaintextPort: 8100
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.processing.buffer.sizeBytes: 25MiB
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.processing.numMergeBuffers: 2
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.processing.numThreads: 1
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.selectors.coordinator.serviceName: druid/coordinator
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.selectors.indexing.serviceName: druid/overlord
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.server.hiddenProperties: ["druid.s3.accessKey","druid.s3.secretKey","druid.metadata.storage.connector.password", "password", "key", "token", "pwd"]
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.server.http.numThreads: 6
+2024-08-01T06:42:44,844 INFO [main] org.apache.druid.cli.CliPeon - * druid.service: druid/middleManager
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.sql.enable: true
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.sql.planner.useGroupingSetForExactDistinct: true
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.startup.logging.logProperties: true
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.storage.storageDirectory: var/druid/segments
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.storage.type: local
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.task.executor.enablePlaintextPort: true
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.task.executor.enableTlsPort: false
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.task.executor.host: localhost
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.task.executor.plaintextPort: 8091
+2024-08-01T06:42:44,845 INFO [main] org.apache.druid.cli.CliPeon - * druid.task.executor.service: druid/middleManager
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * druid.task.executor.tlsPort: -1
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * druid.tlsPort: -1
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * druid.worker.baseTaskDirs: ["var/druid/task"]
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * druid.worker.capacity: 2
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * druid.zk.paths.base: /druid
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * druid.zk.service.host: localhost
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * file.encoding: UTF-8
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * file.separator: /
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * java.awt.graphicsenv: sun.awt.X11GraphicsEnvironment
+2024-08-01T06:42:44,846 INFO [main] org.apache.druid.cli.CliPeon - * java.awt.printerjob: sun.print.PSPrinterJob
+2024-08-01T06:42:44,847 INFO [main] org.apache.druid.cli.CliPeon - * java.class.path: /home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/middleManager:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/_common:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/_common/hadoop-xml:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/../_common:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/../_common/hadoop-xml:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-kms-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-services-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jcl-over-slf4j-1.7.36.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aggdesigner-algorithm-6.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-core-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/protobuf-java-3.24.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/FastInfoset-1.2.15.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/datasketches-memory-2.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-jackson2-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/snappy-java-1.1.10.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-servlets-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-jul-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/zookeeper-3.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/avatica-server-1.23.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/resilience4j-core-1.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/avatica-core-1.23.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-spi-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-buffer-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-client-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/antlr4-runtime-4.5.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jcodings-1.0.43.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jts-io-common-1.19.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/joni-2.1.27.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-dns-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/compress-lzf-1.0.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/fastutil-core-8.5.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-commons-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guava-32.0.1-jre.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-sts-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-rewrite-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/oshi-core-6.4.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/lz4-java-1.8.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jsr311-api-1.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/async-http-client-netty-utils-2.5.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/caffeine-2.8.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-datatype-guava-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/calcite-core-1.35.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-databind-2.12.7.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-slf4j-impl-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/failureaccess-1.0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/rhino-1.7.14.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-settings-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-resolver-dns-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-gcp-common-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/avatica-metrics-1.23.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-dataformat-smile-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.el-api-3.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-http-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-util-ajax-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-s3-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-server-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jq-0.0.10.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-ec2-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-module-jaxb-annotations-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-indexing-hadoop-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-analysis-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-classes-epoll-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/vavr-match-0.10.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/resilience4j-bulkhead-1.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-core-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-artifact-3.6.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-x-discovery-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-model-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/plexus-utils-3.0.24.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-pool2-2.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpclient-4.5.13.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/fastutil-extra-8.5.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-servlet-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/metrics-core-4.2.22.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/json-smart-2.4.11.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.inject-api-1.0.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.activation-1.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-collections4-4.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/classmate-1.5.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/tesla-aether-0.0.5.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-assistedinject-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-core-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/wagon-provider-api-2.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-util-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/airline-2.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/opencensus-api-0.31.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/accessors-smart-2.4.11.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-proxy-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jaxb-api-2.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jsr305-2.0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-server-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jna-platform-5.13.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-api-client-2.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/gson-2.10.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-resolver-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/opencsv-4.6.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/plexus-interpolation-1.19.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/reactive-streams-1.0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-annotations-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/config-magic-0.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jna-5.13.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-handler-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jts-core-1.19.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-repository-metadata-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-multibindings-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jaxrs-smile-provider-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jboss-logging-3.4.1.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jmespath-java-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-aether-provider-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jaxb-runtime-2.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-server-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-security-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-connector-file-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/elasticache-java-cluster-client-1.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/vavr-0.10.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/istack-commons-runtime-3.0.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/zstd-jni-1.5.2-3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-impl-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-model-builder-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-compiler-3.1.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-continuation-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.servlet-api-3.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/sigar-1.6.5.132.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.el-3.0.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-client-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-aws-common-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/RoaringBitmap-0.9.49.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-indexing-service-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-http-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpcore-4.4.11.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/shims-0.9.49.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jaxrs-json-provider-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/xz-1.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-framework-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-io-2.11.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/disruptor-3.3.6.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-compress-1.26.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-apache-v2-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/proj4j-1.2.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/derbynet-10.14.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-api-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-guice-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-native-epoll-4.1.108.Final-linux-x86_64.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/datasketches-java-4.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-servlet-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/checker-qual-2.5.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/web-console-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-api-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpcore5-5.1.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-dataformat-cbor-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/uzaygezen-core-0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/joda-time-2.12.5.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/airline-io-2.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-collections-3.2.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-beanutils-1.9.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/stax-ex-1.8.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jdbi-2.63.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-3.10.6.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-codec-1.16.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.xml.bind-api-2.3.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-reactive-streams-2.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-datatype-joda-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/error_prone_annotations-2.20.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-socks-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/audience-annotations-0.12.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-settings-builder-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/json-simple-1.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/async-http-client-2.5.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-handler-proxy-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/fastutil-8.5.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-sql-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-connector-okhttp-0.0.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/apiguardian-api-1.1.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.validation-api-2.0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/okhttp-1.0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.activation-api-1.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/janino-3.1.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/grpc-context-1.27.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-gson-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-servlet-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/icu4j-73.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aopalliance-1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-common-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.inject-1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-recipes-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/hibernate-validator-6.2.5.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpcore5-h2-5.1.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/cron-scheduler-0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-io-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-math3-3.6.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-module-guice-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/txw2-2.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-oauth-client-1.34.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-dbcp2-2.0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-1.2-api-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/j2objc-annotations-2.8.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-tree-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpclient5-5.1.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/json-path-2.9.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-text-1.10.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/opencensus-contrib-http-util-0.31.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-lang-2.6.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-lang3-3.12.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-processing-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/slf4j-api-1.7.36.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-native-unix-common-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/ipaddress-5.3.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jaxrs-base-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-core-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/derbyclient-10.14.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/calcite-linq4j-1.35.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-logging-1.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-util-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.activation-api-1.2.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/zookeeper-jute-3.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/derby-10.14.2.0.jar
+2024-08-01T06:42:44,847 INFO [main] org.apache.druid.cli.CliPeon - * java.class.version: 55.0
+2024-08-01T06:42:44,847 INFO [main] org.apache.druid.cli.CliPeon - * java.home: /usr/lib/jvm/java-11-openjdk-amd64
+2024-08-01T06:42:44,847 INFO [main] org.apache.druid.cli.CliPeon - * java.io.tmpdir: var/tmp
+2024-08-01T06:42:44,847 INFO [main] org.apache.druid.cli.CliPeon - * java.library.path: /usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.runtime.name: OpenJDK Runtime Environment
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.runtime.version: 11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.specification.maintenance.version: 2
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.specification.name: Java Platform API Specification
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.specification.vendor: Oracle Corporation
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.specification.version: 11
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.util.logging.manager: org.apache.logging.log4j.jul.LogManager
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.vendor: Ubuntu
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.vendor.url: https://ubuntu.com/
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.vendor.url.bug: https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+2024-08-01T06:42:44,848 INFO [main] org.apache.druid.cli.CliPeon - * java.version: 11.0.23
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.version.date: 2024-04-16
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.compressedOopsMode: 32-bit
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.info: mixed mode, sharing
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.name: OpenJDK 64-Bit Server VM
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.specification.name: Java Virtual Machine Specification
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.specification.vendor: Oracle Corporation
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.specification.version: 11
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.vendor: Ubuntu
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * java.vm.version: 11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * jdk.debug: release
+2024-08-01T06:42:44,849 INFO [main] org.apache.druid.cli.CliPeon - * line.separator: 
+
+2024-08-01T06:42:44,850 INFO [main] org.apache.druid.cli.CliPeon - * log4j.shutdownCallbackRegistry: org.apache.druid.common.config.Log4jShutdown
+2024-08-01T06:42:44,850 INFO [main] org.apache.druid.cli.CliPeon - * log4j.shutdownHookEnabled: true
+2024-08-01T06:42:44,850 INFO [main] org.apache.druid.cli.CliPeon - * log4j2.configurationFactory: org.apache.druid.indexing.common.tasklogs.ConsoleLoggingEnforcementConfigurationFactory
+2024-08-01T06:42:44,850 INFO [main] org.apache.druid.cli.CliPeon - * log4j2.is.webapp: false
+2024-08-01T06:42:44,850 INFO [main] org.apache.druid.cli.CliPeon - * os.arch: amd64
+2024-08-01T06:42:44,850 INFO [main] org.apache.druid.cli.CliPeon - * os.name: Linux
+2024-08-01T06:42:44,851 INFO [main] org.apache.druid.cli.CliPeon - * os.version: 6.5.0-44-generic
+2024-08-01T06:42:44,851 INFO [main] org.apache.druid.cli.CliPeon - * path.separator: :
+2024-08-01T06:42:44,851 INFO [main] org.apache.druid.cli.CliPeon - * sun.arch.data.model: 64
+2024-08-01T06:42:44,851 INFO [main] org.apache.druid.cli.CliPeon - * sun.boot.library.path: /usr/lib/jvm/java-11-openjdk-amd64/lib
+2024-08-01T06:42:44,851 INFO [main] org.apache.druid.cli.CliPeon - * sun.cpu.endian: little
+2024-08-01T06:42:44,851 INFO [main] org.apache.druid.cli.CliPeon - * sun.cpu.isalist: 
+2024-08-01T06:42:44,852 INFO [main] org.apache.druid.cli.CliPeon - * sun.desktop: gnome
+2024-08-01T06:42:44,852 INFO [main] org.apache.druid.cli.CliPeon - * sun.io.unicode.encoding: UnicodeLittle
+2024-08-01T06:42:44,852 INFO [main] org.apache.druid.cli.CliPeon - * sun.java.command: org.apache.druid.cli.Main internal peon var/druid/task/slot0/query-a9df4ec6-8a4b-439f-8f95-9f77db436235 1
+2024-08-01T06:42:44,852 INFO [main] org.apache.druid.cli.CliPeon - * sun.java.launcher: SUN_STANDARD
+2024-08-01T06:42:44,852 INFO [main] org.apache.druid.cli.CliPeon - * sun.jnu.encoding: UTF-8
+2024-08-01T06:42:44,852 INFO [main] org.apache.druid.cli.CliPeon - * sun.management.compiler: HotSpot 64-Bit Tiered Compilers
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * sun.os.patch.level: unknown
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * user.country: IN
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * user.dir: /home/naman/experiments/druid/apache-druid-30.0.0
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * user.home: /home/naman
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * user.language: en
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * user.name: naman
+2024-08-01T06:42:44,853 INFO [main] org.apache.druid.cli.CliPeon - * user.timezone: UTC
+2024-08-01T06:42:44,874 WARN [main] org.apache.druid.indexing.common.config.TaskConfig - Batch processing mode argument value is null or not valid:[null], defaulting to[CLOSED_SEGMENTS] 
+2024-08-01T06:42:44,937 INFO [main] org.apache.druid.query.DruidProcessingConfig - Detected max direct memory size of [314,572,800] bytes
+2024-08-01T06:42:44,950 INFO [main] org.apache.druid.segment.loading.SegmentLocalCacheManager - Using storage location strategy: [LeastBytesUsedStorageLocationSelectorStrategy]
+2024-08-01T06:42:44,967 INFO [main] org.apache.druid.guice.StorageNodeModule - Segment cache not configured on ServerType [indexer-executor]. It will not be assignable for segment placement
+2024-08-01T06:42:45,022 INFO [main] org.eclipse.jetty.util.log - Logging initialized @3657ms to org.eclipse.jetty.util.log.Slf4jLog
+2024-08-01T06:42:45,033 INFO [main] org.apache.druid.server.initialization.jetty.JettyServerModule - Creating http connector with port [8100]
+2024-08-01T06:42:45,130 WARN [main] org.eclipse.jetty.server.handler.gzip.GzipHandler - minGzipSize of 0 is inefficient for short content, break even is size 23
+2024-08-01T06:42:45,134 INFO [main] org.apache.druid.offheap.OffheapBufferGenerator - Allocating new intermediate processing buffer[0] of size[26,214,400]
+2024-08-01T06:42:45,147 INFO [main] org.apache.druid.offheap.OffheapBufferGenerator - Allocating new result merging buffer[0] of size[26,214,400]
+2024-08-01T06:42:45,155 INFO [main] org.apache.druid.offheap.OffheapBufferGenerator - Allocating new result merging buffer[1] of size[26,214,400]
+2024-08-01T06:42:45,224 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Starting lifecycle [module] stage [INIT]
+2024-08-01T06:42:45,225 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Starting lifecycle [module] stage [NORMAL]
+2024-08-01T06:42:45,231 INFO [main] org.apache.curator.framework.imps.CuratorFrameworkImpl - Starting
+2024-08-01T06:42:45,237 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:zookeeper.version=3.8.4-9316c2a7a97e1666d8f4593f34dd6fc36ecc436c, built on 2024-02-12 22:16 UTC
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:host.name=naman-Vostro-3500
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.version=11.0.23
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.vendor=Ubuntu
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.home=/usr/lib/jvm/java-11-openjdk-amd64
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.class.path=/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/middleManager:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/_common:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/_common/hadoop-xml:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/../_common:/home/naman/experiments/druid/apache-druid-30.0.0/conf/druid/single-server/nano-quickstart/../_common/hadoop-xml:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-kms-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-services-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jcl-over-slf4j-1.7.36.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aggdesigner-algorithm-6.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-core-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/protobuf-java-3.24.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/FastInfoset-1.2.15.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/datasketches-memory-2.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-jackson2-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/snappy-java-1.1.10.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-servlets-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-jul-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/zookeeper-3.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/avatica-server-1.23.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/resilience4j-core-1.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/avatica-core-1.23.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-spi-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-buffer-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-client-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/antlr4-runtime-4.5.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jcodings-1.0.43.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jts-io-common-1.19.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/joni-2.1.27.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-dns-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/compress-lzf-1.0.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/fastutil-core-8.5.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-commons-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guava-32.0.1-jre.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-sts-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-rewrite-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/oshi-core-6.4.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/lz4-java-1.8.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jsr311-api-1.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/async-http-client-netty-utils-2.5.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/caffeine-2.8.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-datatype-guava-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/calcite-core-1.35.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-databind-2.12.7.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-slf4j-impl-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/failureaccess-1.0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/rhino-1.7.14.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-settings-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-resolver-dns-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-gcp-common-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/avatica-metrics-1.23.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-dataformat-smile-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.el-api-3.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-http-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-util-ajax-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-s3-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-server-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jq-0.0.10.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aws-java-sdk-ec2-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-module-jaxb-annotations-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-indexing-hadoop-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-analysis-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-classes-epoll-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/vavr-match-0.10.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/resilience4j-bulkhead-1.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-core-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-artifact-3.6.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-x-discovery-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-model-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/plexus-utils-3.0.24.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-pool2-2.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpclient-4.5.13.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/fastutil-extra-8.5.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-servlet-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/metrics-core-4.2.22.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/json-smart-2.4.11.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.inject-api-1.0.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.activation-1.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-collections4-4.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/classmate-1.5.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/tesla-aether-0.0.5.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-assistedinject-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-core-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/wagon-provider-api-2.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-util-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/airline-2.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/opencensus-api-0.31.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/accessors-smart-2.4.11.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-proxy-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jaxb-api-2.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jsr305-2.0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-server-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jna-platform-5.13.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-api-client-2.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/gson-2.10.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-resolver-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/opencsv-4.6.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/plexus-interpolation-1.19.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/reactive-streams-1.0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-annotations-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/config-magic-0.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jna-5.13.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-handler-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jts-core-1.19.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-repository-metadata-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-multibindings-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jaxrs-smile-provider-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jboss-logging-3.4.1.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jmespath-java-1.12.638.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-aether-provider-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jaxb-runtime-2.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-server-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-security-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-connector-file-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/elasticache-java-cluster-client-1.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/vavr-0.10.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/istack-commons-runtime-3.0.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/zstd-jni-1.5.2-3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-impl-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-model-builder-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-compiler-3.1.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-continuation-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.servlet-api-3.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/sigar-1.6.5.132.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.el-3.0.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-client-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-aws-common-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/RoaringBitmap-0.9.49.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-indexing-service-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-http-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpcore-4.4.11.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/shims-0.9.49.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jaxrs-json-provider-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/xz-1.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-framework-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-io-2.11.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/disruptor-3.3.6.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-compress-1.26.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-apache-v2-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/proj4j-1.2.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/derbynet-10.14.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-api-0.9.0.M2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jersey-guice-1.19.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-native-epoll-4.1.108.Final-linux-x86_64.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/datasketches-java-4.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-servlet-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/checker-qual-2.5.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/web-console-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-api-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpcore5-5.1.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-dataformat-cbor-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/guice-4.1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/uzaygezen-core-0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/joda-time-2.12.5.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/airline-io-2.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-collections-3.2.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-beanutils-1.9.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/stax-ex-1.8.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jdbi-2.63.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-3.10.6.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-codec-1.16.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.xml.bind-api-2.3.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-reactive-streams-2.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-datatype-joda-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/error_prone_annotations-2.20.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-codec-socks-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/audience-annotations-0.12.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/maven-settings-builder-3.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/json-simple-1.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/async-http-client-2.5.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-handler-proxy-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/fastutil-8.5.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-sql-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aether-connector-okhttp-0.0.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/apiguardian-api-1.1.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.validation-api-2.0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/okhttp-1.0.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.activation-api-1.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/janino-3.1.9.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/grpc-context-1.27.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-http-client-gson-1.42.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-servlet-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/icu4j-73.2.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/aopalliance-1.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-common-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/javax.inject-1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/curator-recipes-5.5.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/hibernate-validator-6.2.5.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpcore5-h2-5.1.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/cron-scheduler-0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-io-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-math3-3.6.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-module-guice-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/txw2-2.3.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/google-oauth-client-1.34.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-dbcp2-2.0.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/log4j-1.2-api-2.22.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/j2objc-annotations-2.8.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/asm-tree-9.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/httpclient5-5.1.3.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/json-path-2.9.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-text-1.10.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/opencensus-contrib-http-util-0.31.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-lang-2.6.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-lang3-3.12.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/druid-processing-30.0.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/slf4j-api-1.7.36.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/netty-transport-native-unix-common-4.1.108.Final.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/ipaddress-5.3.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-jaxrs-base-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jackson-core-2.12.7.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/derbyclient-10.14.2.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/calcite-linq4j-1.35.0.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/commons-logging-1.1.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jetty-util-9.4.54.v20240208.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/jakarta.activation-api-1.2.1.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/zookeeper-jute-3.8.4.jar:/home/naman/experiments/druid/apache-druid-30.0.0/bin/../lib/derby-10.14.2.0.jar
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.io.tmpdir=var/tmp
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:java.compiler=<NA>
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:os.name=Linux
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:os.arch=amd64
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:os.version=6.5.0-44-generic
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:user.name=naman
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:user.home=/home/naman
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:user.dir=/home/naman/experiments/druid/apache-druid-30.0.0
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:os.memory.free=95MB
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:os.memory.max=256MB
+2024-08-01T06:42:45,238 INFO [main] org.apache.zookeeper.ZooKeeper - Client environment:os.memory.total=256MB
+2024-08-01T06:42:45,244 INFO [main] org.apache.zookeeper.ZooKeeper - Initiating client connection, connectString=localhost sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3436d3d7
+2024-08-01T06:42:45,247 INFO [main] org.apache.zookeeper.common.X509Util - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2024-08-01T06:42:45,249 INFO [main] org.apache.zookeeper.ClientCnxnSocket - jute.maxbuffer value is 1048575 Bytes
+2024-08-01T06:42:45,254 INFO [main] org.apache.zookeeper.ClientCnxn - zookeeper.request.timeout value is 0. feature enabled=false
+2024-08-01T06:42:45,261 INFO [main-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn - Opening socket connection to server localhost/127.0.0.1:2181.
+2024-08-01T06:42:45,262 INFO [main-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2024-08-01T06:42:45,263 INFO [main] org.apache.curator.framework.imps.CuratorFrameworkImpl - Default schema
+2024-08-01T06:42:45,268 INFO [main-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn - Socket connection established, initiating session, client: /127.0.0.1:43182, server: localhost/127.0.0.1:2181
+2024-08-01T06:42:45,273 INFO [main] org.apache.druid.query.lookup.LookupReferencesManager - Loading lookups using spec[LookupLoadingSpec{mode=ALL, lookupsToLoad=null}].
+2024-08-01T06:42:45,279 INFO [main-SendThread(localhost:2181)] org.apache.zookeeper.ClientCnxn - Session establishment complete on server localhost/127.0.0.1:2181, session id = 0x1000053f34b0005, negotiated timeout = 30000
+2024-08-01T06:42:45,283 INFO [main-EventThread] org.apache.curator.framework.state.ConnectionStateManager - State change: CONNECTED
+2024-08-01T06:42:45,294 INFO [main-EventThread] org.apache.curator.framework.imps.EnsembleTracker - New config event received: {}
+2024-08-01T06:42:45,295 INFO [main-EventThread] org.apache.curator.framework.imps.EnsembleTracker - New config event received: {}
+2024-08-01T06:42:45,302 WARN [NodeRoleWatcher[OVERLORD]] org.apache.druid.curator.discovery.CuratorDruidNodeDiscoveryProvider$NodeRoleWatcher - Ignored event type [CONNECTION_RECONNECTED] for node watcher of role [overlord].
+2024-08-01T06:42:45,302 WARN [NodeRoleWatcher[COORDINATOR]] org.apache.druid.curator.discovery.CuratorDruidNodeDiscoveryProvider$NodeRoleWatcher - Ignored event type [CONNECTION_RECONNECTED] for node watcher of role [coordinator].
+2024-08-01T06:42:45,347 INFO [NodeRoleWatcher[OVERLORD]] org.apache.druid.discovery.BaseNodeRoleWatcher - Node [http://localhost:8081] of role [overlord] detected.
+2024-08-01T06:42:45,347 INFO [NodeRoleWatcher[COORDINATOR]] org.apache.druid.discovery.BaseNodeRoleWatcher - Node [http://localhost:8081] of role [coordinator] detected.
+2024-08-01T06:42:45,347 INFO [NodeRoleWatcher[COORDINATOR]] org.apache.druid.discovery.BaseNodeRoleWatcher - Node watcher of role [coordinator] is now initialized with 1 nodes.
+2024-08-01T06:42:45,347 INFO [NodeRoleWatcher[OVERLORD]] org.apache.druid.discovery.BaseNodeRoleWatcher - Node watcher of role [overlord] is now initialized with 1 nodes.
+2024-08-01T06:42:45,373 INFO [main] org.apache.druid.indexing.worker.executor.ExecutorLifecycle - Running with task: {
+  "type" : "query_controller",
+  "id" : "query-a9df4ec6-8a4b-439f-8f95-9f77db436235",
+  "spec" : {
+    "query" : {
+      "queryType" : "scan",
+      "dataSource" : {
+        "type" : "external",
+        "inputSource" : {
+          "type" : "local",
+          "baseDir" : "quickstart/tutorial",
+          "filter" : "wikiticker-2015-09-12-sampled.json.gz"
+        },
+        "inputFormat" : {
+          "type" : "json",
+          "keepNullColumns" : false,
+          "assumeNewlineDelimited" : false,
+          "useJsonNodeReader" : false
+        },
+        "signature" : [ {
+          "name" : "time",
+          "type" : "STRING"
+        }, {
+          "name" : "channel",
+          "type" : "STRING"
+        }, {
+          "name" : "cityName",
+          "type" : "STRING"
+        }, {
+          "name" : "comment",
+          "type" : "STRING"
+        }, {
+          "name" : "countryIsoCode",
+          "type" : "STRING"
+        }, {
+          "name" : "countryName",
+          "type" : "STRING"
+        }, {
+          "name" : "isAnonymous",
+          "type" : "STRING"
+        }, {
+          "name" : "isMinor",
+          "type" : "STRING"
+        }, {
+          "name" : "isNew",
+          "type" : "STRING"
+        }, {
+          "name" : "isRobot",
+          "type" : "STRING"
+        }, {
+          "name" : "isUnpatrolled",
+          "type" : "STRING"
+        }, {
+          "name" : "metroCode",
+          "type" : "LONG"
+        }, {
+          "name" : "namespace",
+          "type" : "STRING"
+        }, {
+          "name" : "page",
+          "type" : "STRING"
+        }, {
+          "name" : "regionIsoCode",
+          "type" : "STRING"
+        }, {
+          "name" : "regionName",
+          "type" : "STRING"
+        }, {
+          "name" : "user",
+          "type" : "STRING"
+        }, {
+          "name" : "delta",
+          "type" : "LONG"
+        }, {
+          "name" : "added",
+          "type" : "LONG"
+        }, {
+          "name" : "deleted",
+          "type" : "LONG"
+        } ]
+      },
+      "intervals" : {
+        "type" : "intervals",
+        "intervals" : [ "-146136543-09-08T08:23:32.096Z/146140482-04-24T15:36:27.903Z" ]
+      },
+      "virtualColumns" : [ {
+        "type" : "expression",
+        "name" : "v0",
+        "expression" : "timestamp_parse(\"time\",null,'UTC')",
+        "outputType" : "LONG"
+      } ],
+      "resultFormat" : "compactedList",
+      "columns" : [ "added", "channel", "cityName", "comment", "countryIsoCode", "countryName", "deleted", "delta", "isAnonymous", "isMinor", "isNew", "isRobot", "isUnpatrolled", "metroCode", "namespace", "page", "regionIsoCode", "regionName", "user", "v0" ],
+      "legacy" : false,
+      "context" : {
+        "__resultFormat" : "array",
+        "__user" : "allowAll",
+        "executionMode" : "async",
+        "finalize" : false,
+        "finalizeAggregations" : false,
+        "groupByEnableMultiValueUnnesting" : false,
+        "maxNumTasks" : 2,
+        "maxParseExceptions" : 0,
+        "queryId" : "a9df4ec6-8a4b-439f-8f95-9f77db436235",
+        "scanSignature" : "[{\"name\":\"added\",\"type\":\"LONG\"},{\"name\":\"channel\",\"type\":\"STRING\"},{\"name\":\"cityName\",\"type\":\"STRING\"},{\"name\":\"comment\",\"type\":\"STRING\"},{\"name\":\"countryIsoCode\",\"type\":\"STRING\"},{\"name\":\"countryName\",\"type\":\"STRING\"},{\"name\":\"deleted\",\"type\":\"LONG\"},{\"name\":\"delta\",\"type\":\"LONG\"},{\"name\":\"isAnonymous\",\"type\":\"STRING\"},{\"name\":\"isMinor\",\"type\":\"STRING\"},{\"name\":\"isNew\",\"type\":\"STRING\"},{\"name\":\"isRobot\",\"type\":\"STRING\"},{\"name\":\"isUnpatrolled\",\"type\":\"STRING\"},{\"name\":\"metroCode\",\"type\":\"LONG\"},{\"name\":\"namespace\",\"type\":\"STRING\"},{\"name\":\"page\",\"type\":\"STRING\"},{\"name\":\"regionIsoCode\",\"type\":\"STRING\"},{\"name\":\"regionName\",\"type\":\"STRING\"},{\"name\":\"user\",\"type\":\"STRING\"},{\"name\":\"v0\",\"type\":\"LONG\"}]",
+        "sqlInsertSegmentGranularity" : "\"DAY\"",
+        "sqlQueryId" : "a9df4ec6-8a4b-439f-8f95-9f77db436235",
+        "sqlReplaceTimeChunks" : "all",
+        "sqlStringifyArrays" : false,
+        "waitUntilSegmentsLoad" : true
+      },
+      "columnTypes" : [ "LONG", "STRING", "STRING", "STRING", "STRING", "STRING", "LONG", "LONG", "STRING", "STRING", "STRING", "STRING", "STRING", "LONG", "STRING", "STRING", "STRING", "STRING", "STRING", "LONG" ],
+      "granularity" : {
+        "type" : "all"
+      }
+    },
+    "columnMappings" : [ {
+      "queryColumn" : "v0",
+      "outputColumn" : "__time"
+    }, {
+      "queryColumn" : "channel",
+      "outputColumn" : "channel"
+    }, {
+      "queryColumn" : "cityName",
+      "outputColumn" : "cityName"
+    }, {
+      "queryColumn" : "comment",
+      "outputColumn" : "comment"
+    }, {
+      "queryColumn" : "countryIsoCode",
+      "outputColumn" : "countryIsoCode"
+    }, {
+      "queryColumn" : "countryName",
+      "outputColumn" : "countryName"
+    }, {
+      "queryColumn" : "isAnonymous",
+      "outputColumn" : "isAnonymous"
+    }, {
+      "queryColumn" : "isMinor",
+      "outputColumn" : "isMinor"
+    }, {
+      "queryColumn" : "isNew",
+      "outputColumn" : "isNew"
+    }, {
+      "queryColumn" : "isRobot",
+      "outputColumn" : "isRobot"
+    }, {
+      "queryColumn" : "isUnpatrolled",
+      "outputColumn" : "isUnpatrolled"
+    }, {
+      "queryColumn" : "metroCode",
+      "outputColumn" : "metroCode"
+    }, {
+      "queryColumn" : "namespace",
+      "outputColumn" : "namespace"
+    }, {
+      "queryColumn" : "page",
+      "outputColumn" : "page"
+    }, {
+      "queryColumn" : "regionIsoCode",
+      "outputColumn" : "regionIsoCode"
+    }, {
+      "queryColumn" : "regionName",
+      "outputColumn" : "regionName"
+    }, {
+      "queryColumn" : "user",
+      "outputColumn" : "user"
+    }, {
+      "queryColumn" : "delta",
+      "outputColumn" : "delta"
+    }, {
+      "queryColumn" : "added",
+      "outputColumn" : "added"
+    }, {
+      "queryColumn" : "deleted",
+      "outputColumn" : "deleted"
+    } ],
+    "destination" : {
+      "type" : "dataSource",
+      "dataSource" : "wikiticker-2015-09-12-sampled",
+      "segmentGranularity" : "DAY",
+      "replaceTimeChunks" : [ "-146136543-09-08T08:23:32.096Z/146140482-04-24T15:36:27.903Z" ]
+    },
+    "assignmentStrategy" : "max",
+    "tuningConfig" : {
+      "maxNumWorkers" : 1,
+      "maxRowsInMemory" : 100000,
+      "rowsPerSegment" : 3000000
+    }
+  },
+  "sqlQuery" : "REPLACE INTO \"wikiticker-2015-09-12-sampled\" OVERWRITE ALL\nWITH input_data AS (SELECT *\nFROM TABLE(\n  EXTERN(\n    '{\"type\":\"local\",\"baseDir\":\"quickstart/tutorial/\",\"filter\":\"wikiticker-2015-09-12-sampled.json.gz\"}',\n    '{\"type\":\"json\"}',\n    '[{\"name\":\"time\",\"type\":\"string\"},{\"name\":\"channel\",\"type\":\"string\"},{\"name\":\"cityName\",\"type\":\"string\"},{\"name\":\"comment\",\"type\":\"string\"},{\"name\":\"countryIsoCode\",\"type\":\"string\"},{\"name\":\"countryName\",\"type\":\"string\"},{\"name\":\"isAnonymous\",\"type\":\"string\"},{\"name\":\"isMinor\",\"type\":\"string\"},{\"name\":\"isNew\",\"type\":\"string\"},{\"name\":\"isRobot\",\"type\":\"string\"},{\"name\":\"isUnpatrolled\",\"type\":\"string\"},{\"name\":\"metroCode\",\"type\":\"long\"},{\"name\":\"namespace\",\"type\":\"string\"},{\"name\":\"page\",\"type\":\"string\"},{\"name\":\"regionIsoCode\",\"type\":\"string\"},{\"name\":\"regionName\",\"type\":\"string\"},{\"name\":\"user\",\"type\":\"string\"},{\"name\":\"delta\",\"type\":\"long\"},{\"name\":\"added\",\"type\":\"long\"},{\"name\":\"deleted\",\"type\":\"long\"}]'\n     )\n   ))\nSELECT\n  TIME_PARSE(\"time\") AS __time,\n  channel,\n  cityName,\n  comment,\n  countryIsoCode,\n  countryName,\n  isAnonymous,\n  isMinor,\n  isNew,\n  isRobot,\n  isUnpatrolled,\n  metroCode,\n  namespace,\n  page,\n  regionIsoCode,\n  regionName,\n  user,\n  delta,\n  added,\n  deleted\nFROM input_data\nPARTITIONED BY DAY",
+  "sqlQueryContext" : {
+    "finalizeAggregations" : false,
+    "sqlQueryId" : "a9df4ec6-8a4b-439f-8f95-9f77db436235",
+    "groupByEnableMultiValueUnnesting" : false,
+    "sqlInsertSegmentGranularity" : "\"DAY\"",
+    "maxNumTasks" : 2,
+    "waitUntilSegmentsLoad" : true,
+    "sqlReplaceTimeChunks" : "all",
+    "executionMode" : "async",
+    "__resultFormat" : "array",
+    "sqlStringifyArrays" : false,
+    "queryId" : "a9df4ec6-8a4b-439f-8f95-9f77db436235"
+  },
+  "sqlResultsContext" : {
+    "timeZone" : "UTC",
+    "serializeComplexValues" : true,
+    "stringifyArrays" : false
+  },
+  "sqlTypeNames" : [ "TIMESTAMP", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "BIGINT", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "VARCHAR", "BIGINT", "BIGINT", "BIGINT" ],
+  "nativeTypeNames" : [ "LONG", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "LONG", "STRING", "STRING", "STRING", "STRING", "STRING", "LONG", "LONG", "LONG" ],
+  "context" : {
+    "forceTimeChunkLock" : true,
+    "useLineageBasedSegmentAllocation" : true
+  },
+  "groupId" : "query-a9df4ec6-8a4b-439f-8f95-9f77db436235",
+  "dataSource" : "wikiticker-2015-09-12-sampled",
+  "resource" : {
+    "availabilityGroup" : "query-a9df4ec6-8a4b-439f-8f95-9f77db436235",
+    "requiredCapacity" : 1
+  }
+}
+2024-08-01T06:42:45,374 INFO [main] org.apache.druid.indexing.worker.executor.ExecutorLifecycle - Attempting to lock file[/home/naman/experiments/druid/apache-druid-30.0.0/var/druid/task/slot0/query-a9df4ec6-8a4b-439f-8f95-9f77db436235/lock].
+2024-08-01T06:42:45,375 INFO [main] org.apache.druid.indexing.worker.executor.ExecutorLifecycle - Acquired lock file[/home/naman/experiments/druid/apache-druid-30.0.0/var/druid/task/slot0/query-a9df4ec6-8a4b-439f-8f95-9f77db436235/lock] in 1ms.
+2024-08-01T06:42:45,479 INFO [main] org.apache.druid.segment.loading.SegmentLocalCacheManager - Using storage location strategy: [LeastBytesUsedStorageLocationSelectorStrategy]
+2024-08-01T06:42:45,486 INFO [task-runner-0-priority-0] org.apache.druid.indexing.overlord.SingleTaskBackgroundRunner - Running task: query-a9df4ec6-8a4b-439f-8f95-9f77db436235
+2024-08-01T06:42:45,488 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Starting lifecycle [module] stage [SERVER]
+2024-08-01T06:42:45,491 INFO [main] org.eclipse.jetty.server.Server - jetty-9.4.54.v20240208; built: 2024-02-08T19:42:39.027Z; git: cef3fbd6d736a21e7d541a5db490381d95a2047d; jvm 11.0.23+9-post-Ubuntu-1ubuntu122.04.1
+2024-08-01T06:42:45,511 INFO [main] org.eclipse.jetty.server.session - DefaultSessionIdManager workerName=node0
+2024-08-01T06:42:45,511 INFO [main] org.eclipse.jetty.server.session - No SessionScavenger set, using defaults
+2024-08-01T06:42:45,512 INFO [main] org.eclipse.jetty.server.session - node0 Scavenging every 660000ms
+2024-08-01T06:42:45,543 WARN [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - arrayIngestMode[mvd] is active for this task. This causes string arrays (VARCHAR ARRAY in SQL) to be ingested as multi-value strings rather than true arrays. This behavior may change in a future version of Druid. To be compatible with future behavior changes, we recommend setting arrayIngestMode to[array], which creates a clearer separation between multi-value strings and true arrays. In either[mvd] or[array] mode, you can write out multi-value string dimensions using ARRAY_TO_MV. See https://druid.apache.org/docs/latest/querying/arrays#arrayingestmode for more details.
+2024-08-01T06:42:45,597 INFO [main] com.sun.jersey.server.impl.application.WebApplicationImpl - Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2024-08-01T06:42:45,823 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Query [47dd3bb1-5614-485a-8051-061e243fe310] starting 1 workers for stage 0.
+2024-08-01T06:42:46,170 INFO [main] org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@7e84af34{/,null,AVAILABLE}
+2024-08-01T06:42:46,187 INFO [main] org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1e734f4c{HTTP/1.1, (http/1.1)}{0.0.0.0:8100}
+2024-08-01T06:42:46,187 INFO [main] org.eclipse.jetty.server.Server - Started @4823ms
+2024-08-01T06:42:46,187 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Starting lifecycle [module] stage [ANNOUNCEMENTS]
+2024-08-01T06:42:46,188 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Successfully started lifecycle [module]
+2024-08-01T06:42:52,820 INFO [ServiceClientFactory-1] org.apache.druid.rpc.ServiceClientImpl - Service [query-a9df4ec6-8a4b-439f-8f95-9f77db436235-worker0_0] request [POST http://localhost:8101/druid/worker/v1/chat/query-a9df4ec6-8a4b-439f-8f95-9f77db436235-worker0_0/workOrder] completed.
+2024-08-01T06:42:54,434 INFO [task-runner-0-priority-0] org.apache.druid.msq.kernel.controller.ControllerStageTracker - Generating partition boundaries from stage: 0 of time chunk: [Sat Sep 12 00:00:00 UTC 2015] GMT
+2024-08-01T06:42:54,435 INFO [task-runner-0-priority-0] org.apache.druid.msq.statistics.ClusterByStatisticsCollectorImpl - Most downsampled keyCollectors: [[DelegateOrMinKeyCollector{delegate=QuantilesSketchKeyCollector{sketch=ItemsSketch{N=39244, K=32768, retainedKeys=39244}, averageKeyLength=50.0}, minKey=null}]]
+2024-08-01T06:42:54,455 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Query [47dd3bb1-5614-485a-8051-061e243fe310] sending out partition boundaries for stage 0 for workers {0}
+2024-08-01T06:42:54,631 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - ShardSpec chosen: Using NumberedShardSpec as no columns are supplied in the 'CLUSTERED BY' clause.
+2024-08-01T06:42:54,650 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Query[47dd3bb1-5614-485a-8051-061e243fe310] generating 1 segments.
+2024-08-01T06:42:54,650 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Query [47dd3bb1-5614-485a-8051-061e243fe310] starting 1 workers for stage 1.
+2024-08-01T06:42:57,078 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Query [47dd3bb1-5614-485a-8051-061e243fe310] issuing cleanup order for stage 0.
+2024-08-01T06:42:57,083 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Query [47dd3bb1-5614-485a-8051-061e243fe310] publishing 1 segments.
+2024-08-01T06:42:57,139 INFO [NodeRoleWatcher[BROKER]] org.apache.druid.discovery.BaseNodeRoleWatcher - Node [http://localhost:8082] of role [broker] detected.
+2024-08-01T06:42:57,139 INFO [NodeRoleWatcher[BROKER]] org.apache.druid.discovery.BaseNodeRoleWatcher - Node watcher of role [broker] is now initialized with 1 nodes.
+2024-08-01T06:43:01,330 INFO [task-runner-0-priority-0] org.apache.druid.msq.exec.ControllerImpl - Controller will now wait for segments to be loaded. The query has already finished executing, and results will be included once the segments are loaded, even if this query is cancelled now.
+2024-08-01T06:43:01,331 INFO [query-a9df4ec6-8a4b-439f-8f95-9f77db436235-segment-load-waiter-0] org.apache.druid.msq.exec.SegmentLoadStatusFetcher - Fetching segment load status for datasource[wikiticker-2015-09-12-sampled] from broker
+2024-08-01T06:43:06,579 INFO [query-a9df4ec6-8a4b-439f-8f95-9f77db436235-segment-load-waiter-0] org.apache.druid.msq.exec.SegmentLoadStatusFetcher - Segment loading completed for datasource[wikiticker-2015-09-12-sampled]
+2024-08-01T06:43:06,592 INFO [task-runner-0-priority-0] org.apache.druid.indexing.worker.executor.ExecutorLifecycle - Task completed with status: {
+  "id" : "query-a9df4ec6-8a4b-439f-8f95-9f77db436235",
+  "status" : "SUCCESS",
+  "duration" : 21102,
+  "errorMsg" : null,
+  "location" : {
+    "host" : null,
+    "port" : -1,
+    "tlsPort" : -1
+  }
+}
+2024-08-01T06:43:06,598 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Stopping lifecycle [module] stage [ANNOUNCEMENTS]
+2024-08-01T06:43:06,599 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Stopping lifecycle [module] stage [SERVER]
+2024-08-01T06:43:06,606 INFO [main] org.eclipse.jetty.server.AbstractConnector - Stopped ServerConnector@1e734f4c{HTTP/1.1, (http/1.1)}{0.0.0.0:8100}
+2024-08-01T06:43:06,606 INFO [main] org.eclipse.jetty.server.session - node0 Stopped scavenging
+2024-08-01T06:43:06,608 INFO [main] org.eclipse.jetty.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@7e84af34{/,null,STOPPED}
+2024-08-01T06:43:06,612 INFO [main] org.apache.druid.indexing.overlord.SingleTaskBackgroundRunner - Starting graceful shutdown of task[query-a9df4ec6-8a4b-439f-8f95-9f77db436235].
+2024-08-01T06:43:06,612 INFO [main] org.apache.druid.msq.exec.ControllerImpl - Query [47dd3bb1-5614-485a-8051-061e243fe310] canceled.
+2024-08-01T06:43:06,613 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Stopping lifecycle [module] stage [NORMAL]
+2024-08-01T06:43:06,631 ERROR [main] org.apache.druid.java.util.metrics.cgroups.CpuAcct - Unable to fetch snapshot
+org.apache.druid.java.util.common.RE: Hierarchy for [cpuacct] not found
+	at org.apache.druid.java.util.metrics.cgroups.ProcCgroupDiscoverer.getCgroupEntry(ProcCgroupDiscoverer.java:118) ~[druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.cgroups.ProcCgroupDiscoverer.discover(ProcCgroupDiscoverer.java:79) ~[druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.cgroups.ProcSelfCgroupDiscoverer.discover(ProcSelfCgroupDiscoverer.java:37) ~[druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.cgroups.CpuAcct.snapshot(CpuAcct.java:77) [druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.CpuAcctDeltaMonitor.doMonitor(CpuAcctDeltaMonitor.java:75) [druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.AbstractMonitor.monitor(AbstractMonitor.java:54) [druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.MonitorScheduler.removeMonitor(MonitorScheduler.java:95) [druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.metrics.MonitorScheduler.stop(MonitorScheduler.java:126) [druid-processing-30.0.0.jar:30.0.0]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[?:?]
+	at org.apache.druid.java.util.common.lifecycle.Lifecycle$AnnotationBasedHandler.stop(Lifecycle.java:465) [druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.java.util.common.lifecycle.Lifecycle.stop(Lifecycle.java:368) [druid-processing-30.0.0.jar:30.0.0]
+	at org.apache.druid.cli.CliPeon.run(CliPeon.java:381) [druid-services-30.0.0.jar:30.0.0]
+	at org.apache.druid.cli.Main.main(Main.java:112) [druid-services-30.0.0.jar:30.0.0]
+2024-08-01T06:43:06,637 INFO [main] org.apache.druid.java.util.metrics.CpuAcctDeltaMonitor - Detected first run, storing result for next run
+2024-08-01T06:43:06,641 INFO [LookupExtractorFactoryContainerProvider-MainThread] org.apache.druid.query.lookup.LookupReferencesManager - Lookup Management loop exited. Lookup notices are not handled anymore.
+2024-08-01T06:43:06,647 INFO [Curator-Framework-0] org.apache.curator.framework.imps.CuratorFrameworkImpl - backgroundOperationsLoop exiting
+2024-08-01T06:43:06,754 INFO [main-EventThread] org.apache.zookeeper.ClientCnxn - EventThread shut down for session: 0x1000053f34b0005
+2024-08-01T06:43:06,754 INFO [main] org.apache.zookeeper.ZooKeeper - Session: 0x1000053f34b0005 closed
+2024-08-01T06:43:06,762 INFO [main] org.apache.druid.java.util.common.lifecycle.Lifecycle - Stopping lifecycle [module] stage [INIT]
+Finished peon task
