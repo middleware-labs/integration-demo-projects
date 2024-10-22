@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert
+    kompose.version: 1.30.0 (9d8dcb518)
+  labels:
+    io.kompose.network/springboot-restful-webservices-springboot-mysql-net: "true"
+    io.kompose.service: springboot-restful-webservices
+  name: springboot-restful-webservices
+  namespace: default
+spec:
+  containers:
+    - env:
+        - name: MW_AGENT_SERVICE
+          value: mw-service.mw-agent-ns.svc.cluster.local
+        - name: MW_API_KEY
+          value: your-api-key
+        - name: MYSQL_DATABASE
+          value: employeedb
+        - name: MYSQL_ROOT
+          value: root
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+        - name: MYSQL_URL
+          value: jdbc:mysql://mysqldb.default.svc.cluster.local:3306/employeedb
+      image: your-image-name:tag
+      name: springboot-restful-webservices
+      ports:
+        - containerPort: 8080
+          hostPort: 8080
+          protocol: TCP
+      resources: {}
+  restartPolicy: OnFailure
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert
+    kompose.version: 1.30.0 (9d8dcb518)
+  labels:
+    io.kompose.service: springboot-restful-webservices
+  name: springboot-restful-webservices
+  namespace: default
+spec:
+  ports:
+    - name: "8080"
+      port: 8080
+      targetPort: 8080
+  selector:
+    io.kompose.service: springboot-restful-webservices

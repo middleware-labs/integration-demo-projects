@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  profiling:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8091:8091"
+    environment:
+      - MW_AGENT_SERVICE=172.17.0.1

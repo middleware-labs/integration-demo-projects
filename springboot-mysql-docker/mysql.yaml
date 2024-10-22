@@ -1,0 +1,71 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert
+    kompose.version: 1.30.0 (9d8dcb518)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mysqldb
+  name: mysqldb
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: mysqldb
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose --file docker-compose.yml convert
+        kompose.version: 1.30.0 (9d8dcb518)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/springboot-restful-webservices-springboot-mysql-net: "true"
+        io.kompose.service: mysqldb
+    spec:
+      containers:
+        - env:
+            - name: MYSQL_DATABASE
+              value: employeedb
+            - name: MYSQL_ROOT
+              value: root
+            - name: MYSQL_ROOT_PASSWORD
+              value: root
+            - name: MYSQL_URL
+              value: jdbc:mysql://mysqldb.default.svc.cluster.local:3306/employeedb
+          image: mysql
+          name: mysqldb
+          ports:
+            - containerPort: 3306
+              hostPort: 3306
+              protocol: TCP
+          resources: {}
+      restartPolicy: Always
+status: {}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: kompose --file docker-compose.yml convert
+    kompose.version: 1.30.0 (9d8dcb518)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mysqldb
+  name: mysqldb
+  namespace: default
+spec:
+  ports:
+    - name: "3306"
+      port: 3306
+      targetPort: 3306
+  selector:
+    io.kompose.service: mysqldb
+status:
+  loadBalancer: {}
+
+

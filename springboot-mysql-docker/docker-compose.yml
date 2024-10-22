@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    environment:
+      MYSQL_ROOT: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employeedb
+      MYSQL_URL: jdbc:mysql://mysqldb:3306/employeedb
+    ports:
+      - "3306:3306"
+    networks:
+      springboot-mysql-net:
+
+  springboot-restful-webservices:
+    container_name: springboot-restful-webservices
+    environment:
+      MYSQL_ROOT: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: employeedb
+      MYSQL_URL: jdbc:mysql://mysqldb:3306/employeedb
+      MW_API_KEY: your-api-key
+      MW_AGENT_SERVICE: 172.17.0.1
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8080"
+    depends_on:
+      - mysqldb
+    networks:
+      springboot-mysql-net:
+    restart: on-failure
+
+networks:
+  springboot-mysql-net:
