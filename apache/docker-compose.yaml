@@ -11,9 +11,9 @@ services:
       - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
       - ./logs/httpd1/:/usr/local/apache2/logs
     ports:
-      - "${HTTPD1_PORT:-8080}:80"
+      - "${HTTPD1_PORT:-8083}:80"
     environment:
-      HTTPD_PORT: ${HTTPD1_PORT:-8080}
+      HTTPD_PORT: ${HTTPD1_PORT:-8083}
 
   httpd2:
     image: httpd:latest
