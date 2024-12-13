@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  cassandra:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9043:9042"
+      - "7199:7199"
+    volumes:
+      - cassandra-data:/var/lib/cassandra
+
+volumes:
+  cassandra-data:
