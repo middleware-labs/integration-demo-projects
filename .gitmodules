@@ -1,0 +1,3 @@
+[submodule "rabbitmq-demo"]
+	path = rabbitmq-demo
+	url = https://github.com/naman47vyas/rabbitmq-demo
