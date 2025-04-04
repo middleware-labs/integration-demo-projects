@@ -9,6 +9,14 @@ services:
       - ELASTIC_USERNAME=elastic
       - ELASTIC_PASSWORD=changeme
       - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - "bootstrap.memory_lock=true"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 65536
+        hard: 65536
     volumes:
       - esdata:/usr/share/elasticsearch/data
     ports:
@@ -16,6 +24,12 @@ services:
       - "9300:9300"
     networks:
       - elastic
+    healthcheck:
+      test: ["CMD", "curl", "-f", "-u", "elastic:changeme", "http://localhost:9200"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 40s
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.17.22
@@ -28,6 +42,29 @@ services:
       - "5601:5601"
     networks:
       - elastic
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+
+  load-generator:
+    build:
+      context: ./load-generator
+      dockerfile: Dockerfile
+    container_name: elastic-load-generator
+    networks:
+      - elastic
+    depends_on:
+      elasticsearch:
+        condition: service_healthy
+    environment:
+      - ES_HOST=http://elasticsearch:9200
+      - ES_USER=elastic
+      - ES_PASS=changeme
+      - DURATION=0  # 0 means run continuously
+      - THREADS=4
+      - BATCH_SIZE=100
+      - INDEX_COUNT=3
+      - INTERVAL=2  # Seconds between operations batches
 
 volumes:
   esdata:
