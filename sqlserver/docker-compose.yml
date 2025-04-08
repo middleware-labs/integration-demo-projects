@@ -1,0 +1,27 @@
+name: mssql-load-generator
+version: '3.1'
+services:
+  mssql:
+    container_name: mssql-db
+    hostname: mssql-db-host
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "Admin@123"
+      MSSQL_PID: 'Developer'
+      MSSQL_AGENT_ENABLED: "true"
+      MSSQL_TCP_PORT: 1433
+      MSSQL_ENABLE_HADR: "1"
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    networks:
+      - mssql-network
+
+networks:
+  mssql-network:
+
+volumes:
+  mssql_data:
+    driver: local
