@@ -1,12 +1,31 @@
 version: "3.8"
+
 services:
   postgres:
     image: postgres:14-alpine
     ports:
-      - 5432:5432
-    volumes:
-      - ~/apps/postgres:/var/lib/postgresql1/data
+      - "5432:5432"
     environment:
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
+      POSTGRES_DB: testdb
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./init:/docker-entrypoint-initdb.d
+    command: ["postgres", "-c", "config_file=/etc/postgresql/postgresql.conf"]
+
+  load-generator:
+    build:
+      context: ./load-generator
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_NAME: testdb
+      DB_USER: testuser
+      DB_PASSWORD: testpass
+
+volumes:
+  postgres_data:
