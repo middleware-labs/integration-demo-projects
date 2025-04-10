@@ -1,4 +1,4 @@
 postgresql:
   endpoint: localhost:5432
-  username: postgres
-  password: postgres
+  username: testuser
+  password: testpass
