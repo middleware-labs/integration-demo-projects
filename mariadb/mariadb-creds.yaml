@@ -1,0 +1,5 @@
+mysql:
+    endpoint: localhost:3307
+    username: mw  
+    password: your_password
+

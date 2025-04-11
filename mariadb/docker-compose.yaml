@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  mariadb:
+    container_name: mariadb
+    image: mariadb:latest
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_DATABASE: mariadb
+      MARIADB_USER: mw
+      MARIADB_PASSWORD: your_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - test-mariadb-data:/var/lib/mysql
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+
+volumes:
+  test-mariadb-data:
