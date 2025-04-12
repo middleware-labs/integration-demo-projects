@@ -1,0 +1,44 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "8000:80"
+    volumes:
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/nginx.conf
+        read_only: true 
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/nginx_status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  fastapi1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - app_network
+    environment:
+      - SERVER_NAME=server1
+    command: python main.py
+
+  fastapi2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - app_network
+    environment:
+      - SERVER_NAME=server2
+    command: python main.py
+
+networks:
+  app_network:
+    driver: bridge
