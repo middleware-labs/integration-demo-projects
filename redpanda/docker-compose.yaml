@@ -63,3 +63,10 @@ services:
       - 8090:8080
     depends_on:
       - redpanda-0
+  loadgen:
+    build:
+      context: ./load-generator
+    depends_on:
+      - redpanda-0
+    networks:
+      - redpanda_network
