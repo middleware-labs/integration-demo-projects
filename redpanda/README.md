@@ -24,5 +24,10 @@ This project sets up a Redpanda client using Docker and generates load using a P
     make down
     ```
 
+---
 
-## `Redpanda endpoint for otel config : 127.0.0.1:19644`
+### Redpanda target for otel config : `127.0.0.1:19644`
+
+### Redpanda dasboard :  <a href="http://127.0.0.1:8090/topics">`http://127.0.0.1:8090/topics`</a>
+
+### Redpanda metrics endpoint for browser : <a href="http://127.0.0.1:19644/metrics">`http://127.0.0.1:19644/metrics`</a>
