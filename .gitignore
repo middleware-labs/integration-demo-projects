@@ -4,3 +4,7 @@ terraform.tfstate
 
 .terraform/
 .secret
+
+filelog-integration/*.log
+filelog-integration/*.log
+
