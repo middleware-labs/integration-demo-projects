@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="log-path">/var/log/app</Property>
+    </Properties>
+
+    <Scripts>
+        <Script name="isJsonAppenderEnabled" language="javascript"><![CDATA[
+            var System = Java.type('java.lang.System'),
+            Boolean = Java.type('java.lang.Boolean');
+            System.getenv('LOG_FORMAT') != 'dev' ;
+        ]]></Script>
+    </Scripts>
+
+    <Appenders>
+        <!-- Console JSON Output - This will be captured by Docker's json-file driver -->
+        <Console name="Console-json" target="SYSTEM_OUT">
+            <JsonLayout compact="true" eventEol="true" properties="true" stacktraceAsString="true">
+                <KeyValuePair key="jarName" value="${env:JAR_NAME:-docker-json-log-reproduction.jar}"/>
+                <KeyValuePair key="serviceName" value="${env:SERVICE_NAME:-json-log-reproduction-service}"/>
+            </JsonLayout>
+        </Console>
+
+        <!-- Pattern console for development -->
+        <Console name="Console-pattern" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <!-- File appender for persistence -->
+        <RollingFile name="server-log" fileName="${log-path}/server.log"
+                     filePattern="${log-path}/server-%d{yyyy-MM-dd}.%i.log.gz">
+            <JsonLayout compact="true" eventEol="true" properties="true" stacktraceAsString="true">
+                <KeyValuePair key="jarName" value="${env:JAR_NAME:-docker-json-log-reproduction.jar}"/>
+                <KeyValuePair key="serviceName" value="${env:SERVICE_NAME:-json-log-reproduction-service}"/>
+            </JsonLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- Application specific loggers -->
+        <Logger name="com.example" level="info" additivity="true"/>
+        <Logger name="org.springframework" level="warn" additivity="true"/>
+        <Logger name="org.apache" level="warn" additivity="true"/>
+
+        <Root level="info">
+            <!-- Use JSON console output by default (for Docker) -->
+            <AppenderRef ref="Console-json"/>
+            <AppenderRef ref="server-log"/>
+        </Root>
+    </Loggers>
+</Configuration> 
