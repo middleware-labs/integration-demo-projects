@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  json-log-app:
+    build: .
+    container_name: json-log-reproduction-container
+    ports:
+      - "8090:8080"
+    environment:
+      - JAR_NAME=docker-json-log-reproduction-1.0.0.jar
+      - SERVICE_NAME=json-log-reproduction-service
+      - LOG_FORMAT=production
+    # This is the key configuration that creates the nested JSON log format
+    logging:
+      driver: json-file
+      options:
+        max-size: "100m"
+        max-file: "5"
+    volumes:
+      # Mount log directory for file logs (optional)
+      - ./logs:/var/log/app
+    restart: unless-stopped
+    # Add labels for easier identification
+    labels:
+      - "service=json-log-reproduction"
+      - "environment=development"
+
+  # Optional: Log viewer service to demonstrate log access
+  log-viewer:
+    image: alpine
+    container_name: log-viewer
+    volumes:
+      # Mount Docker's log directory to access the json-file logs
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+    command: >
+      sh -c "
+        echo 'Log viewer started. Container logs are available at:';
+        echo '/var/lib/docker/containers/*/json-log-reproduction-container-json.log*';
+        echo 'Use: docker logs json-log-reproduction-container to view logs';
+        echo 'Use: docker logs json-log-reproduction-container --follow to follow logs';
+        tail -f /dev/null
+      "
+    depends_on:
+      - json-log-app
+
+volumes:
+  logs:
+    driver: local
+
+networks:
+  default:
+    name: json-log-reproduction-network 
