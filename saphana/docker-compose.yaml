@@ -1,0 +1,97 @@
+name: saphana-load-generator
+
+services:
+  hxe:
+    container_name: saphana-db
+    hostname: hxe
+    image: saplabs/hanaexpress:2.00.088.00.20251110.1
+    # HANA ships x86-64 only. Pinned explicitly so this file behaves the same
+    # on an arm64 host (it will emulate, slowly).
+    platform: linux/amd64
+    # The entrypoint reads the master password from this file on first boot.
+    command: ["--passwords-url", "file:///hana/password.json", "--agree-to-sap-license"]
+    volumes:
+      - hana_data:/hana/mounts
+      # Must be world-readable: the entrypoint drops to uid 12000 before
+      # reading it, so a 0600 file owned by your user fails with curl exit 37.
+      - ./password.json:/hana/password.json:ro
+    sysctls:
+      # shmmni is HARD-CAPPED at 32768 (IPCMNI) unless the host kernel was
+      # booted with `ipcmni_extend`. Anything larger makes runc fail the
+      # container with "write /proc/sys/kernel/shmmni: invalid argument".
+      kernel.shmmni: "32768"
+      # Widened ephemeral range for HANA's many internal service connections.
+      # Starts above 40000 to stay clear of the 39013-39045 SQL ports.
+      net.ipv4.ip_local_port_range: "40000 60999"
+    ulimits:
+      nofile:
+        soft: 1048576
+        hard: 1048576
+    # HANA's startup check warns that move_pages and mbind are blocked by
+    # Docker's default seccomp profile. Both are NUMA page-placement syscalls
+    # gated behind CAP_SYS_NICE; granting it is far narrower than
+    # seccomp=unconfined. (The image's own "--print seccomp.json" advice is
+    # stale and produces a zero-byte file on this tag.)
+    cap_add:
+      - SYS_NICE
+    ports:
+      # These are the REAL ports on this image, read from
+      # SYS_DATABASES.M_SERVICES — not guessed. `make ports` re-runs that query.
+      #
+      #   DATABASE_NAME  SERVICE_NAME   SQL_PORT
+      #   SYSTEMDB       nameserver     39017
+      #   HXE            indexserver    39041      <-- point the MW agent here
+      #
+      # 39015 is a common guess for the tenant and is NOT in use on this build.
+      - "39013:39013"   # SYSTEMDB SQL entry point (for hdbsql / port discovery)
+      - "39017:39017"   # SYSTEMDB nameserver SQL_PORT
+      - "39041:39041"   # HXE tenant indexserver SQL_PORT — the agent endpoint
+      - "39044:39044"   # tenant SQL over TLS
+    healthcheck:
+      # -d HXE is REQUIRED. Without a database name hdbsql ignores -p, falls
+      # back to Single Sign-On, and fails with a misleading
+      # "Single Sign-On authentication failed" even when the password is right.
+      # Probing the TENANT means this only passes once HXE is actually open,
+      # which is what the load generator's depends_on needs to gate on.
+      test: ["CMD-SHELL", "/usr/sap/HXE/HDB90/exe/hdbsql -n localhost:39013 -d HXE -u SYSTEM -p \"$${HANA_PASSWORD}\" 'SELECT 1 FROM DUMMY' >/dev/null 2>&1 || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 60
+      # First boot takes ~10 minutes on this image. Do not lower this.
+      start_period: 900s
+    environment:
+      HANA_PASSWORD: ${HANA_PASSWORD:-HXEHana1}
+    stop_grace_period: 5m
+    networks:
+      - saphana-network
+
+  loadgen:
+    container_name: saphana-loadgen
+    build:
+      context: ./load-generator
+    depends_on:
+      hxe:
+        condition: service_healthy
+    environment:
+      HANA_HOST: hxe
+      # Connect via the SYSTEMDB entry port and name the tenant; the nameserver
+      # redirects to the tenant's real port. hdbcli supports databaseName, so
+      # this survives the tenant being recreated on a different port.
+      # (The MW agent cannot do this — it must target 39041 directly.)
+      HANA_PORT: "39013"
+      HANA_DATABASE: HXE
+      HANA_USER: SYSTEM
+      HANA_PASSWORD: ${HANA_PASSWORD:-HXEHana1}
+      WRITER_THREADS: "2"
+      READER_THREADS: "2"
+      BATCH_SIZE: "500"
+    restart: unless-stopped
+    networks:
+      - saphana-network
+
+networks:
+  saphana-network:
+
+volumes:
+  hana_data:
+    driver: local
